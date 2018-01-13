@@ -1,0 +1,89 @@
+
+packageSkin.png
+size: 1024,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+elephant16px_0
+  rotate: false
+  xy: 1, 534
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+lucidaConsole12px_0
+  rotate: false
+  xy: 259, 534
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+lucidaConsole16px_0
+  rotate: false
+  xy: 1, 276
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+lucidaFax16px_0
+  rotate: false
+  xy: 1, 276
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+lucidaFax12px_0
+  rotate: false
+  xy: 1, 18
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+stencil16px_0
+  rotate: false
+  xy: 517, 534
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+stencil32px_0
+  rotate: false
+  xy: 259, 276
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+buttonDown
+  rotate: false
+  xy: 259, 265
+  size: 9, 9
+  split: 4, 4, 4, 4
+  orig: 9, 9
+  offset: 0, 0
+  index: -1
+buttonOver
+  rotate: false
+  xy: 775, 781
+  size: 9, 9
+  split: 4, 4, 4, 4
+  pad: 3, 5, 3, 5
+  orig: 9, 9
+  offset: 0, 0
+  index: -1
+buttonUp
+  rotate: false
+  xy: 517, 523
+  size: 9, 9
+  split: 4, 4, 4, 4
+  orig: 9, 9
+  offset: 0, 0
+  index: -1
+packageBackground
+  rotate: false
+  xy: 1, 1
+  size: 15, 15
+  split: 7, 7, 7, 7
+  pad: 7, 7, 5, 5
+  orig: 15, 15
+  offset: 0, 0
+  index: -1
