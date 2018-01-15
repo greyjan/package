@@ -18,6 +18,12 @@ com.badlogic.gdx.graphics.g2d.BitmapFont: {
 	stencil16px: {
 		file: stencil16px.fnt
 	}
+	stencil18px: {
+		file: stencil18px.fnt
+	}
+	stencil22px: {
+		file: stencil22px.fnt
+	}
 	stencil32px: {
 		file: stencil32px.fnt
 	}
@@ -48,11 +54,15 @@ com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle: {
 		background: packageBackground
 	}
 	subTitle: {
-		font: stencil16px
+		font: stencil22px
 		fontColor: RGBA_0_0_0_255
 	}
 	title: {
 		font: stencil32px
+		fontColor: RGBA_0_0_0_255
+	}
+	small: {
+		font: lucidaFax12px
 		fontColor: RGBA_0_0_0_255
 	}
 }
@@ -63,6 +73,22 @@ com.badlogic.gdx.scenes.scene2d.ui.TextButton$TextButtonStyle: {
 		up: buttonUp
 		down: buttonDown
 		over: buttonOver
+	}
+}
+com.badlogic.gdx.scenes.scene2d.ui.TextField$TextFieldStyle: {
+	default: {
+		font: lucidaFax16px
+		fontColor: RGBA_0_0_0_255
+		background: paperTextField
+		cursor: cursor
+		selection: selection
+	}
+	textArea: {
+		font: lucidaFax16px
+		fontColor: RGBA_0_0_0_255
+		background: paperTextArea
+		cursor: cursor
+		selection: selection
 	}
 }
 com.badlogic.gdx.scenes.scene2d.ui.TextTooltip$TextTooltipStyle: {
