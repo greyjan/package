@@ -12,7 +12,7 @@ import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.greyjan.packageorganizer.PackageOrganizer;
-import com.greyjan.packageorganizer.utils.Assets;
+import com.greyjan.packageorganizer.theme.Theme;
 
 /**
  * Created by Jan Fic on 1/10/2018.
@@ -31,7 +31,7 @@ public final class SplashScreen extends Stage implements Screen {
 
     private void makeLayout() {
         table.setFillParent(true);
-        final Texture texture = Assets.GetInstance().get("art/splashScreen/logo.png");
+        final Texture texture = new Texture("art/splashScreen/logo.png");
         Actor actor = new Actor() {
             @Override
             public void draw(Batch batch, float parentAlpha) {
@@ -45,6 +45,7 @@ public final class SplashScreen extends Stage implements Screen {
             @Override
             public void run() {
                 game.setScreen(new MainMenuScreen(game));
+                SplashScreen.this.dispose();
             }
         })));
 
@@ -61,7 +62,7 @@ public final class SplashScreen extends Stage implements Screen {
 
     @Override
     public void render(float delta) {
-        Color c = Color.GRAY;
+        Color c = Theme.BG_COLOR;
         Gdx.gl.glClearColor(c.r, c.g, c.b, c.a);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         act();

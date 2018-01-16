@@ -9,8 +9,10 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 import com.greyjan.packageorganizer.PackageOrganizer;
+import com.greyjan.packageorganizer.theme.Theme;
 import com.greyjan.packageorganizer.utils.Assets;
 import com.greyjan.packageorganizer.utils.LevelAssets;
+import com.greyjan.packageorganizer.utils.PackageManager;
 
 public class LoadingScreen implements Screen {
 
@@ -21,7 +23,6 @@ public class LoadingScreen implements Screen {
     private final Stage stage;
 
     public interface ILoadingListener {
-
         public void OnFinished();
     }
 
@@ -34,7 +35,7 @@ public class LoadingScreen implements Screen {
         System.out.println("Making Loading Screen...");
 
         this.game = game;
-
+        PackageManager.loadPackages();
         stage = new Stage(new ExtendViewport(PackageOrganizer.WIDTH / 2, PackageOrganizer.HEIGHT / 2));
         loadListener = new LevelAssets.ILoadListener() {
 
@@ -56,6 +57,7 @@ public class LoadingScreen implements Screen {
                 if (loadingListener != null) {
                     loadingListener.OnFinished();
                 }
+                LoadingScreen.this.dispose();
             }
 
         };
@@ -71,7 +73,7 @@ public class LoadingScreen implements Screen {
 
     @Override
     public void render(float delta) {
-        Color c = Color.SLATE;
+        Color c = Theme.BG_COLOR;
         Gdx.gl20.glClearColor(c.r, c.g, c.b, 1);
         Gdx.gl20.glClear(GL20.GL_COLOR_BUFFER_BIT);
         assets.update();
