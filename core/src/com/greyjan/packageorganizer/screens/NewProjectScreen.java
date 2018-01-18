@@ -17,7 +17,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.ui.TextField;
 import com.greyjan.packageorganizer.PackageOrganizer;
-import com.greyjan.packageorganizer.theme.FormTable;
+import com.greyjan.packageorganizer.theme.ClipboardTable;
 import com.greyjan.packageorganizer.theme.PackageTable;
 import com.greyjan.packageorganizer.theme.Theme;
 import com.greyjan.packageorganizer.project.Package;
@@ -117,7 +117,7 @@ public class NewProjectScreen extends Stage implements Screen {
         infoTable.add(menuTable).expandY().fillY();
         table.add(infoTable).growY().top();
 
-        FormTable form = new FormTable();
+        ClipboardTable form = new ClipboardTable();
         form.defaults().space(5);
         Label titleOfForm = new Label("New Package", Theme.getSkin(), "subTitle");
         form.add(titleOfForm).row();

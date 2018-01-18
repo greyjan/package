@@ -5,6 +5,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
 import com.greyjan.packageorganizer.screens.LoadingScreen;
+import com.greyjan.packageorganizer.screens.MainMenuScreen;
 import com.greyjan.packageorganizer.screens.SplashScreen;
 import com.greyjan.packageorganizer.utils.PackageManager;
 
@@ -21,7 +22,7 @@ public class PackageOrganizer extends Game {
         loadingScreen.setILoadingListener(new LoadingScreen.ILoadingListener() {
             @Override
             public void OnFinished() {
-                setScreen(splashScreen);
+                setScreen(new MainMenuScreen(PackageOrganizer.this));
             }
         });
         this.setScreen(loadingScreen);

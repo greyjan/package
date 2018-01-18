@@ -15,7 +15,6 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
-import com.badlogic.gdx.scenes.scene2d.ui.ScrollPane;
 import com.greyjan.packageorganizer.PackageOrganizer;
 import com.greyjan.packageorganizer.theme.PackageTable;
 import com.greyjan.packageorganizer.theme.Theme;
@@ -60,8 +59,19 @@ public class LoadProjectScreen extends Stage implements Screen{
         projects.top();
         projects.pad(5);
         projects.defaults().growX().prefHeight(50).pad(5);
-        for(Package p : PackageManager.packages) {
+        for(final Package p : PackageManager.packages) {
             TextButton selectProject = new TextButton(p.getProjectName(),Theme.getSkin());
+            selectProject.addListener(new InputListener() {
+                @Override
+                public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
+                    return true;
+                }
+
+                @Override
+                public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
+                    game.setScreen(new ProjectScreen(game,p));
+                }
+            });
             projects.add(selectProject).row();
         }
         table.add(projects).growY().row();

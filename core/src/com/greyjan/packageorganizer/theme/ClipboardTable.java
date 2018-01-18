@@ -18,13 +18,13 @@ import com.greyjan.packageorganizer.utils.Assets;
  *
  * @author Jan Fic
  */
-public class FormTable extends Table {
+public class ClipboardTable extends Table {
 
     Skin skin;
     Drawable clipBoard;
     NinePatch paper;
 
-    public FormTable() {
+    public ClipboardTable() {
         super();
         top();
         skin = Assets.GetInstance().get("skin/packageSkin.json");

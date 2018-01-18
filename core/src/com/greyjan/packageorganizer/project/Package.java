@@ -6,6 +6,7 @@
 package com.greyjan.packageorganizer.project;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -14,12 +15,18 @@ import java.io.Serializable;
 public class Package implements Serializable {
 
     private final String projectName, userName;
-
+    private final ArrayList<PackagePart> projectParts;
+    
     public Package(String pN, String uN) {
         projectName = pN;
         userName = uN;
+        projectParts = new ArrayList<PackagePart>();
     }
 
+    public void addProjectPart(PackagePart part) {
+        projectParts.add(part);
+    }
+    
     public String getProjectName() {
         return projectName;
     }
