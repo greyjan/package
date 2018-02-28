@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
@@ -31,6 +32,7 @@ public class MainMenuScreen extends Stage implements Screen {
         skin = Assets.GetInstance().get("skin/packageSkin.json");
         table = new Table();
         makeLayout();
+        
     }
 
     private void makeLayout() {
@@ -115,7 +117,7 @@ public class MainMenuScreen extends Stage implements Screen {
 
     @Override
     public void resize(int width, int height) {
-        getViewport().update(width, height);
+        getViewport().update(width, height, true);
     }
 
     @Override

@@ -148,7 +148,7 @@ public class NewProjectScreen extends Stage implements Screen {
 
     @Override
     public void resize(int width, int height) {
-        this.getViewport().update(width, height);
+        getViewport().update(width, height,true);
     }
 
     @Override

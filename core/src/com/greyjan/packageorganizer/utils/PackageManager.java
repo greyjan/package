@@ -21,7 +21,7 @@ import java.io.ObjectOutputStream;
  */
 public class PackageManager {
     
-    private final static FileHandle PATH = Gdx.files.external("Package/");
+    private final static FileHandle PATH = Gdx.files.local("Package/");
     
     public static ArrayList<Package> packages = new ArrayList<Package>();
     
@@ -44,6 +44,7 @@ public class PackageManager {
         }
         for(Package p : packages) {
             System.out.println("Loaded Package : " + p.getProjectName());
+            System.out.println(p.toString());
         }
     }
     
@@ -54,6 +55,7 @@ public class PackageManager {
                 FileHandle file = path.child(p.getProjectName() + ".ser");
                 ObjectOutputStream os = new ObjectOutputStream(file.write(false));
                 os.writeObject(p);
+                System.out.println("Saved " + p.toString());
             } catch (IOException ex) {
                 Logger.getLogger(PackageManager.class.getName()).log(Level.SEVERE, null, ex);
             }

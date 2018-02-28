@@ -35,7 +35,6 @@ public class LoadingScreen implements Screen {
         System.out.println("Making Loading Screen...");
 
         this.game = game;
-        PackageManager.loadPackages();
         stage = new Stage(new ExtendViewport(PackageOrganizer.WIDTH / 2, PackageOrganizer.HEIGHT / 2));
         loadListener = new LevelAssets.ILoadListener() {
 
@@ -83,7 +82,7 @@ public class LoadingScreen implements Screen {
 
     @Override
     public void resize(int width, int height) {
-        stage.getViewport().update(width, height);
+        stage.getViewport().update(width, height,true);
     }
 
     @Override

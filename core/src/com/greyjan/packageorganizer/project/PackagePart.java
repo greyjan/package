@@ -5,9 +5,12 @@
  */
 package com.greyjan.packageorganizer.project;
 
+import com.badlogic.gdx.scenes.scene2d.Actor;
+
 /**
  *
  * @author Jan Fic
  */
 public interface PackagePart {
+    Actor getActor();
 }
